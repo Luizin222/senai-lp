@@ -7,3 +7,4 @@ git push -u origin master
 
 -- quando necessário
 git config credential.username "Luiz Daniel"
+..
