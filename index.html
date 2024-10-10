@@ -10,55 +10,57 @@
     <ul>
         <script>
             const arquivos = ["livrojs/cap01/exe1_2.html",
-"livrojs/cap01/exe1_3.html",
-"livrojs/cap01/exe1_4.html",
-"livrojs/cap01/exe1_5.html",
-"livrojs/cap01/exe1_6.html",
-"livrojs/cap01/exe1_7.html",
-"livrojs/cap01/exe1_8.html",
-"livrojs/cap01/exercicio_1.11.c.html",
-"livrojs/cap01/exercício_1.11.a.html",
-"livrojs/cap01/exercício_1.11.b.html",
-"livrojs/cap01/exe1_8.html",
-"livrojs/cap01/exercicio_1.11.c.html",
-"livrojs/cap01/exercício_1.11.a.html",
-"livrojs/cap01/exercício_1.11.b.html",
-"livrojs/cap01/exercicio_1.11.c.html",
-"livrojs/cap01/exercício_1.11.a.html",
-"livrojs/cap01/exercício_1.11.b.html",
-"livrojs/cap01/exercício_1.11.a.html",
-"livrojs/cap01/exercício_1.11.b.html",
-"livrojs/cap01/exercício_1.11.d.html",
-"livrojs/cap02/exe2_1.html",
-"livrojs/cap02/exe2_2.html",
-"livrojs/cap02/exe2_1.html",
-"livrojs/cap02/exe2_2.html",
-"livrojs/cap02/exe2_2.html",
-"livrojs/cap02/exe2_3.html",
-"livrojs/cap02/exe2_4.html",
-"livrojs/cap02/exe2_A.html",
-"livrojs/cap02/exe2_B.html",
-"livrojs/cap02/exe2_C.html",
-"livrojs/cap02/exe2_B.html",
-"livrojs/cap02/exe2_C.html",
-"livrojs/cap02/exe2_C.html",
-"livrojs/cap04/exe4_1.html",
-"livrojs/cap04/exe4_1.html",
-"livrojs/cap04/exe4_2.html",
-"livrojs/cap04/exe4_3.html",
-"livrojs/cap04/exe4_4.html",
-"livrojs/cap04/exe4_5.html",
-"livrojs/cap04/exe4_a.html",
-"livrojs/cap04/exe4_b.html",
-"livrojs/cap04/exe4_c.html",
-"livrojs/cap04/exe4_d.html"]
+            "livrojs/cap01/exe1_3.html",
+            "livrojs/cap01/exe1_4.html",
+            "livrojs/cap01/exe1_5.html",
+            "livrojs/cap01/exe1_6.html",
+            "livrojs/cap01/exe1_7.html",
+            "livrojs/cap01/exe1_8.html",
+            "livrojs/cap01/exercicio_1.11.c.html",
+            "livrojs/cap01/exercício_1.11.a.html",
+            "livrojs/cap01/exercício_1.11.b.html",
+            "livrojs/cap01/exercício_1.11.d.html",
+            "livrojs/cap02/exe2_1.html",
+            "livrojs/cap02/exe2_2.html",
+            "livrojs/cap02/exe2_1.html",
+            "livrojs/cap02/exe2_2.html",
+            "livrojs/cap02/exe2_2.html",
+            "livrojs/cap02/exe2_3.html",
+            "livrojs/cap02/exe2_4.html",
+            "livrojs/cap02/exe2_A.html",
+            "livrojs/cap02/exe2_B.html",
+            "livrojs/cap02/exe2_C.html",
+            "livrojs/cap02/exe2_B.html",
+            "livrojs/cap02/exe2_C.html",
+            "livrojs/cap02/exe2_C.html",
+            "livrojs/cap04/exe4_1.html",
+            "livrojs/cap04/exe4_1.html",
+            "livrojs/cap04/exe4_2.html",
+            "livrojs/cap04/exe4_3.html",
+            "livrojs/cap04/exe4_4.html",
+            "livrojs/cap04/exe4_5.html",
+            "livrojs/cap04/exe4_a.html",
+            "livrojs/cap04/exe4_b.html",
+            "livrojs/cap04/exe4_c.html",
+            "livrojs/cap04/exe4_d.html"]
+            let cap = ""
             for(let i = 0; i < arquivos.length; i++ ){
-                document.write(`<li><a href="${arquivos[i]}">${arquivos[i]}</a></li>`)
+                let url = arquivos[i].split("/")
+                if(cap != url[1]){
+                    cap = url[1]
+                document.write(`<h3>${cap.replace("cap","Capítulo")}</h3>`)
+                }
+                
+                let link = arquivos[i].substring(14)
+                .replace(".html","")
+                .replace("exe","Exemplo ") 
+                .replace("resp","Resposta ")
+                .replace("exercício",".")
+                .replace("_",".")
+                document.write(`<li><a href="${arquivos[i]}">${link}</a></li>`)
             }
-
         </script>
         
-     
     </ul>
 </body>
 </html>
