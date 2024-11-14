@@ -1,0 +1,67 @@
+https://www.hackerrank.com/challenges/select-all-sql/problem?isFullScreen=true
+
+select * from city;
+
+https://www.hackerrank.com/challenges/select-by-id/problem?isFullScreen=true
+
+select * from city where id = 1661;
+
+https://www.hackerrank.com/challenges/weather-observation-station-1/problem?isFullScreen=true
+
+select city, state from station
+
+https://www.hackerrank.com/challenges/japanese-cities-attributes/problem?isFullScreen=true
+
+select * from city where countrycode = "JPN";
+
+https://www.hackerrank.com/challenges/revising-the-select-query/problem?isFullScreen=true
+
+select * from city where population > 100000 and countrycode = 'USA';
+
+https://www.hackerrank.com/challenges/revising-the-select-query-2/problem?isFullScreen=true
+
+SELECT NAME FROM CITY WHERE COUNTRYCODE = 'USA' AND (POPULATION > 120000)
+
+https://www.hackerrank.com/challenges/weather-observation-station-6/problem?isFullScreen=true
+
+
+SELECT CITY FROM STATION 
+WHERE CITY LIKE 'A%' 
+   OR CITY LIKE 'E%' 
+   OR CITY LIKE 'I%' 
+   OR CITY LIKE 'O%' 
+   OR CITY LIKE 'U%'
+   OR CITY LIKE 'a%' 
+   OR CITY LIKE 'e%' 
+   OR CITY LIKE 'i%' 
+   OR CITY LIKE 'o%' 
+   OR CITY LIKE 'u%';
+
+   https://www.hackerrank.com/challenges/weather-observation-station-7/problem?isFullScreen=true
+   
+   SELECT DISTINCT CITY FROM STATION 
+WHERE (CITY LIKE '%A' 
+   OR CITY LIKE '%E' 
+   OR CITY LIKE '%I' 
+   OR CITY LIKE '%O' 
+   OR CITY LIKE '%U')
+   AND(CITY LIKE '%a' 
+   OR CITY LIKE '%e' 
+   OR CITY LIKE '%i' 
+   OR CITY LIKE '%o' 
+   OR CITY LIKE '%u')
+
+   https://www.hackerrank.com/challenges/weather-observation-station-8/problem?isFullScreen=true
+   
+   SELECT DISTINCT CITY FROM STATION 
+WHERE (CITY LIKE 'A%' 
+   OR CITY LIKE 'E%' 
+   OR CITY LIKE 'I%' 
+   OR CITY LIKE 'O%' 
+   OR CITY LIKE 'U%')
+  AND (CITY LIKE '%A'
+   OR CITY LIKE '%E' 
+   OR CITY LIKE '%I' 
+   OR CITY LIKE '%O' 
+   OR CITY LIKE '%U')
+   
